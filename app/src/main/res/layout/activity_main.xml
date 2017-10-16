@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ej.demop.MainActivity">
+
+    <com.example.ejplayer.myplaysdk.widget.media.IjkVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="true">
+
+
+    </com.example.ejplayer.myplaysdk.widget.media.IjkVideoView>
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:elevation="0dp"
+        android:onClick="clickTogglePause"
+        android:text="PAUSE" />
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickTogglePlay"
+        android:text="START" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="475dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_play"
+        android:layout_marginLeft="88dp"
+        android:layout_marginStart="88dp"
+        android:allowUndo="true"
+        android:autoText="false"
+        android:contextClickable="true"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="http://zv.3gv.ifeng.com/live/zhongwen800k.m3u8"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorLink="@android:color/background_dark"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/button_flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button_pause"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_pause"
+        android:onClick="clickToggleFlip"
+        android:text="FLIP" />
+
+    <Button
+        android:id="@+id/button_rot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button_flip"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button_flip"
+        android:layout_marginTop="37dp"
+        android:onClick="clickToggleRotate"
+        android:text="Rot" />
+
+    <TextView
+        android:id="@+id/versionView"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="TextView" />
+
+
+</RelativeLayout>
